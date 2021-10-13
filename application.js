@@ -60,12 +60,9 @@ let updateTimeLeft = function (amount) {
     }else if(radioValue === 'minus'){
         num1 = randomNumber(Number(range_value));
         num2 = randomNumber(Number(range_value));
-        while(num1 < num2){
-         num1 = randomNumber(Number(range_value));
-         num2 = randomNumber(Number(range_value));
-        }
-        question.answer = (num1 - num2);
-        question.display =String(num1) + "-" + String(num2);
+        let num3 =num1 + num2;
+        question.answer = (num3 - num1);
+        question.display =String(num3) + "-" + String(num1);
     }else if(radioValue === 'times'){
         num1 = randomNumber(Number(range_value));
         num2 = randomNumber(Number(range_value));
@@ -74,17 +71,9 @@ let updateTimeLeft = function (amount) {
     }else if(radioValue === 'divide'){
         num1 = randomNumber(Number(range_value));
         num2 = randomNumber(Number(range_value));
-       
-
-        while(num1 % num2 !=0){
-            num1 = randomNumber(Number(range_value));
-            num2 = randomNumber(Number(range_value));
-        }
-                
-           
-              
-        question.answer = (num1 / num2);
-        question.display =String(num1) + "/" + String(num2);
+        let num3 = num1 * num2;    
+        question.answer = num2;
+        question.display =String(num3) + "/" + String(num1);
     }
       
       
